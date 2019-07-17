@@ -29,18 +29,7 @@ public class TestClass extends Base{
 		return ReadExcel.getCellData("./testdata/loginInfo.xlsx", "Sheet1");
 		
 		}
-	
 
-	
-	/*@Test(priority=1,description="This TC will perform invalid login" ,dataProvider="providelogininfo")
-	public void loginToApplication1(String username,String password) throws InterruptedException, FileNotFoundException
-	{
-		POMLoginPageEnterpriseDemo loginpage = PageFactory.initElements(driver, POMLoginPageEnterpriseDemo.class);
-		loginpage.loginEnterPrise(username, password);
-		boolean check = verifyDashBoardisPresent();
-		Assert.assertEquals(true,check);
-		Reporter.log("============Inside the Home Page============",true);
-	}*/
 	
 	@Test(priority=1,description="This TC will perform valid login",dataProvider="providelogininfo")
 	public void loginToApplication(String username,String password) throws Throwable
